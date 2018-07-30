@@ -210,7 +210,7 @@ contract OpetToken is StandardToken, Ownable {
 
   string public constant name = "Opet Token";
   string public constant symbol = "OPET";
-  uint32 public constant decimals = 8;
+  uint32 public constant decimals = 18;
 
   bool public transferPaused = true;
 
