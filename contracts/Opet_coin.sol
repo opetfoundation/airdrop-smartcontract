@@ -253,14 +253,29 @@ contract OpetToken is StandardToken, Ownable {
     }
   }
 
-  function addWhitelistedTransfer(address _address) public onlyOwner {
-    whitelistedTransfer[_address] = true;
+  function addWhitelistedTransfer(address[] _addresses) public onlyOwner {
+    for(uint i = 0; i < _addresses.length; i++){
+      whitelistedTransfer[_addresses[i]] = true;
+    }
   }
 
-  function removeWhitelistedTransfer(address _address) public onlyOwner {
-    whitelistedTransfer[_address] = false;
+  function removeWhitelistedTransfer(address[] _addresses) public onlyOwner {
+    for(uint i = 0; i < _addresses.length; i++){
+      whitelistedTransfer[_addresses[i]] = false;
+    }
   }
 
+  function addToTokenLocked(address[] _addresses) public onlyOwner {
+    for(uint i = 0; i < _addresses.length; i++){
+      tokenLockedAddresses[_addresses[i]] = true;
+    }
+  }
+
+  function removeFromTokenLocked(address[] _addresses) public onlyOwner {
+    for(uint i = 0; i < _addresses.length; i++){
+      tokenLockedAddresses[_addresses[i]] = false;
+    }
+  }
 
 
 }
