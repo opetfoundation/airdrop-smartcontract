@@ -1,2 +1,2 @@
-# airdrop-smartcontract
-This repository contains the smartcontract for distribution of tokens in the airdrop.
+# smartcontract
+This repository contains the smartcontract for minting of Opet Token.
